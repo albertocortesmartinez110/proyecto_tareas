@@ -1,7 +1,116 @@
-.contenido{
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 2fr repeat(3,1fr);
-    grid-gap: 5px;
-}.contenido >div{
-    border: black 1px solid;
- }
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.contenido, .encabezado {
+    display: grid;
+    grid-template-columns: .5fr repeat(2, 1fr) 2fr 1fr .5fr .5fr;
+    grid-row-gap: 1px;
+    border: 1px solid black;
+    background-color: black;
+    width: 90%;
+}
+
+.contenido > div {
+    text-align: center;
+    background-color: white;
+    padding-top: 3px;
+}
+
+.cabecera {
+    background-color: #666262 !important;
+    color: white;
+}
+
+.añadir_tarea {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    margin-bottom: 10px;
+    background-color: #666262;
+    color: white;
+    width: 400px;
+    height: 24px;
+    padding-top: 3px;
+}
+
+.añadir_tarea input {
+    width: 95%;
+}
+
+.modal, .modal_editar {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    visibility: hidden;
+}
+.popup, .popup_editar{
+    background-color: white;
+    width: 20%;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    border: #1c1c1c 1px solid;
+}
+
+.popup > form > div, .popup_editar >form >div {
+    padding-top: 10px;
+}
+.popup_editar input{
+    width: 90%;
+}
+
+.popup textarea, .popup_editar textarea {
+    width: 90%;
+    height: 70px;
+    resize: none;
+}
+
+.popup .boton, .popup_editar .boton  {
+    width: 90%;
+    height: 30px;
+    background-color: #ceffff;
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.btn-cerrar-popup, .btn-cerrar-popup_editar {
+    text-align: right;
+    display: block;
+    color: #1c1c1c;
+    margin-right: 10px;
+}
+
+
+/* estilos iconos*/
+.icon {
+    font-size: 20px;
+}
+
+.ion-md-checkmark {
+    color: #5eab5e;
+}
+input[type="number"] {
+    -webkit-appearance: textfield !important;
+    -moz-appearance: textfield !important;
+}
+
+.ion-md-settings {
+    color: red;
+}
