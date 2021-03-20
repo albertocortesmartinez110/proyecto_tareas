@@ -11,7 +11,20 @@ body {
     grid-template-columns: 1fr;
     justify-items: center;
 }
-
+.contenido_frases{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 400px;
+    background-color: white;
+    color: black;
+}
+.contenido_frases >div{
+    margin-top: 15px;
+    font-size: 20px;
+}
+.contenido_frases .frase{
+    color: #2bb01a;
+}
 .contenido, .encabezado {
     display: grid;
     grid-template-columns: .5fr repeat(2, 1fr) 2fr 1fr .5fr .5fr;
@@ -59,6 +72,18 @@ body {
     justify-content: center;
     grid-template-columns: 1fr;
     visibility: hidden;
+}
+.modal_crear_cookie{
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
 }
 .popup, .popup_editar{
     background-color: white;
